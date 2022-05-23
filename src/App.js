@@ -1,10 +1,16 @@
-import Product from './Product/Product';
+import Navbar from './components/Navbar/Navbar';
+import ProductPhoto from './components/ProductPhoto/ProductPhoto';
+import ProductInfo from './components/ProductInfo/ProductInfo';
+import AddToCart from './components/AddToCart/AddToCart';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Product />
+      <Navbar />
+      <ProductPhoto />
+      <ProductInfo />
+      <AddToCart />
     </div>
   );
 }
