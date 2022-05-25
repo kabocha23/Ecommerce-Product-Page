@@ -1,3 +1,44 @@
 .addToCart-container {
-    background-color: grey;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.addToCart-counter {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 200px;
+    justify-content: center;
+}
+.addToCart-counter button {
+    all: unset;
+    cursor: pointer;
+    width: 20%;
+}
+.addToCart-counter p {
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+}
+.addToCart-submit {
+
+}
+
+@media (max-width: 400px) {
+    .addToCart-counter {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .addToCart-counter p {
+        text-align: center;
+    }
+    .addToCart-submit {
+        width: 100%;
+    }
+    .addToCart-submit button {
+        all: unset;
+        cursor: pointer;
+        width: 90%;
+    }
 }

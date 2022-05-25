@@ -1,0 +1,10 @@
+
+.productPhoto-container img {
+    width: 400px;
+}   
+
+@media (max-width: 400px) {
+    .productPhoto-container img {
+        width: 100%;
+    }    
+}

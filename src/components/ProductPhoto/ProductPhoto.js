@@ -6,7 +6,7 @@ class ProductPhoto extends Component{
     render(){
         return(
             <div className='productPhoto-container'>
-                <p>Product Photo</p>
+                <img src={require('../../images/image-product-1.jpg')} alt='product-1'></img>
             </div>
         )
     }

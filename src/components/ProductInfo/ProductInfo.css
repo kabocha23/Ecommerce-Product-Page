@@ -1,0 +1,100 @@
+#productInfo-company {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(26, 100%, 55%);
+    margin-left: 20px;
+}
+#productInfo-title {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: hsl(220, 13%, 13%);
+    margin-left: 20px;
+}
+#productInfo-description {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(219, 9%, 45%);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.productInfo-price-container {
+    display: flex;
+    flex-flow: row
+}
+#productInfo-curr-price {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: hsl(220, 13%, 13%);
+    margin-left: 20px;
+}
+#productInfo-discount {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(26, 100%, 55%);
+    margin-left: 20px;
+    background-color: hsl(25, 100%, 94%);
+}
+#productInfo-prev-price{
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+
+@media (max-width: 500px) {
+    #productInfo-company {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: hsl(26, 100%, 55%);
+        margin-left: 20px;
+    }
+    #productInfo-title {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: hsl(220, 13%, 13%);
+        margin-left: 20px;
+    }
+    #productInfo-description {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: hsl(219, 9%, 45%);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .productInfo-price-container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #productInfo-curr-price {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: hsl(220, 13%, 13%);
+        margin-left: 20px;
+    }
+    #productInfo-discount {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: hsl(26, 100%, 55%);
+        margin-left: 20px;
+        background-color: hsl(25, 100%, 94%);
+    }
+    #productInfo-prev-price{
+        font-size: 16px;
+        font-weight: bold;
+        color: hsl(220, 14%, 75%);
+        text-decoration: line-through;
+    }
+}
