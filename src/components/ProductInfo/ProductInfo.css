@@ -1,8 +1,26 @@
+.productInfo-container {
+    cursor: default;
+}
+
+.productInfo-contents {
+    display:flex;
+    flex-flow: row wrap;
+}
+.productInfo-photo {
+    width: 40%;
+    min-width: 400px;
+    margin: 0 auto;
+}
+.productInfo-details {
+    width: 40%;
+    min-width: 400px;
+    margin: 0 auto;
+}
 #productInfo-company {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: hsl(26, 100%, 55%);
+    color: hsl(26, 100%, 70%);
     margin-left: 20px;
 }
 #productInfo-title {
@@ -20,81 +38,120 @@
     margin-left: 20px;
     margin-right: 20px;
 }
-
+/* Price, discount and previous price container */
 .productInfo-price-container {
     display: flex;
-    flex-flow: row
+    flex-flow: row wrap;
+    margin: 20px;
 }
-#productInfo-curr-price {
+.productInfo-curr-price {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: hsl(220, 13%, 13%);
-    margin-left: 20px;
+    margin-right: 10px;
 }
-#productInfo-discount {
+.productInfo-discount p {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: hsl(26, 100%, 55%);
-    margin-left: 20px;
     background-color: hsl(25, 100%, 94%);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 5px;
 }
-#productInfo-prev-price{
+.productInfo-prev-price{
     font-size: 16px;
-    font-weight: 400;
-    color: hsl(220, 14%, 75%);
-    text-decoration: line-through;
+    font-weight: bold;
+    color: hsl(220, 14%, 80%);
+    text-decoration: line-through;        
+    margin-left: auto;
+    margin-right: 20px;
+}
+/* Quantity and Add to Cart Button container */
+.productInfo-add-to-cart {
+    align-items: flex-end;
+    margin-top: 10%;
 }
 
 
 @media (max-width: 500px) {
+    .productInfo-container {
+        cursor: default;
+    }
+    .productInfo-contents {
+        display:flex;
+        flex-flow: row wrap;
+    }
+    .productInfo-photo {
+        width: 100%;
+        min-width: 200px;
+        margin: 0 auto;
+    }
+    .productInfo-details {
+        width: 100%;
+        min-width: 200px;
+        margin: 0 auto;
+    }
     #productInfo-company {
         font-family: 'Kumbh Sans', sans-serif;
         font-size: 16px;
         font-weight: 700;
-        color: hsl(26, 100%, 55%);
-        margin-left: 20px;
+        color: hsl(26, 100%, 70%);
+        margin: 20px;
     }
     #productInfo-title {
         font-family: 'Kumbh Sans', sans-serif;
         font-size: 30px;
         font-weight: bold;
         color: hsl(220, 13%, 13%);
-        margin-left: 20px;
+        margin: 20px;
     }
     #productInfo-description {
         font-family: 'Kumbh Sans', sans-serif;
         font-size: 15px;
         font-weight: bold;
-        color: hsl(219, 9%, 45%);
-        margin-left: 20px;
-        margin-right: 20px;
+        color: hsl(220, 14%, 70%);
+        margin: 20px;
     }
     
     .productInfo-price-container {
         display: flex;
         flex-flow: row wrap;
+        margin-bottom: 0px;
     }
-    #productInfo-curr-price {
+    .productInfo-curr-price {
         font-family: 'Kumbh Sans', sans-serif;
         font-size: 20px;
         font-weight: bold;
         color: hsl(220, 13%, 13%);
         margin-left: 20px;
+        margin-right: 10px;
     }
-    #productInfo-discount {
+    .productInfo-discount p {
         font-family: 'Kumbh Sans', sans-serif;
         font-size: 16px;
         font-weight: 700;
         color: hsl(26, 100%, 55%);
-        margin-left: 20px;
         background-color: hsl(25, 100%, 94%);
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        padding: 5px;
     }
-    #productInfo-prev-price{
+    .productInfo-prev-price{
         font-size: 16px;
         font-weight: bold;
-        color: hsl(220, 14%, 75%);
-        text-decoration: line-through;
+        color: hsl(220, 14%, 80%);
+        text-decoration: line-through;        
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .productInfo-add-to-cart {
+        align-items: flex-end;
+        margin-top: 0px;
     }
 }

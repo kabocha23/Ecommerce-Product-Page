@@ -1,14 +1,90 @@
 .navbar-container {
     display: flex;
     height: 100px;
+    margin-bottom: 5%;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+/* sidebar */
+.sidebar-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 80%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: gray;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.openbtn:hover {
+    background-color: hsl(0, 0%, 80%);
+}
+
+#open-button {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+  /*  */
+.navbar-brand {
+    cursor: pointer;
+    height: 100%; 
+    position: relative;
+    width: 20%;
+    max-width: 100px;
+    margin-left: 10px;
+}
+.navbar-brand img {
+    cursor: pointer;
+    height: 30%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 .navbar-cart {
     height: 100%; 
     position: relative;
-    width: 10%;
+    width: 20%;
+    max-width: 100px;
     margin-left: auto;
 }
 .navbar-cart img {
+    cursor: pointer;
     height: 30%;
     margin: auto;
     position: absolute;
@@ -20,9 +96,11 @@
 .navbar-profile {
     height: 100%; 
     position: relative;
-    width: 10%;
+    width: 20%;
+    max-width: 100px;
 }
 .navbar-profile img {
+    cursor: pointer;
     height: 50%;
     margin: auto;
     position: absolute;
@@ -32,19 +110,40 @@
     right: 0px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .navbar-container {
         display: flex;
-        height: 80px;
+        height: 55px;
+        margin-bottom: 0%;
+        border-bottom: 0px;
+    }
+    .navbar-brand {
+        cursor: pointer;
+        height: 100%; 
+        position: relative;
+        width: 20%;
+        max-width: 100px;
+        margin-left: auto;
+    }
+    .navbar-brand img {
+        cursor: pointer;
+        height: 30%;
+        margin: auto;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
     }
     .navbar-cart {
         height: 100%; 
         position: relative;
         width: 20%;
+        min-width: 50px;
         margin-left: auto;
     }
     .navbar-cart img {
-        height: 30%;
+        height: 20px;
         margin: auto;
         position: absolute;
         top: 0px;
@@ -56,9 +155,10 @@
         height: 100%; 
         position: relative;
         width: 20%;
+        min-width: 50px;
     }
     .navbar-profile img {
-        height: 50%;
+        height: 40px;
         margin: auto;
         position: absolute;
         top: 0px;

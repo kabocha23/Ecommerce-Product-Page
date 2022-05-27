@@ -1,10 +1,16 @@
-
+.productPhoto-container {
+    display: flex;
+    flex-flow: row wrap;
+}
 .productPhoto-container img {
     width: 400px;
+    border-radius: 10px;
+    margin: auto;
 }   
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .productPhoto-container img {
         width: 100%;
+        border-radius: 0px;
     }    
 }

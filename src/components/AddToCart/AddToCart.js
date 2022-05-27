@@ -1,17 +1,18 @@
 import React, { Component, useState } from 'react';
+import cartIcon from '../../images/icon-cart.svg';
 import './AddToCart.css';
 
 const AddToCart = () => {
 
-    let [count, setCount] = useState(0);
+    let [qty, setQty] = useState(0);
     let [cartItems, setCartItems] = useState([]);
 
     const incrementQty = () => {
-        setCount(count + 1);
+        setQty(qty + 1);
     }
 
     const decrementQty = () => {
-        setCount(count => Math.max(count-1,0));
+        setQty(qty => Math.max(qty-1,0));
     }
 
     const onAdd = (item, qty) => {
@@ -26,19 +27,26 @@ const AddToCart = () => {
             }
             setCartItems(cartItems = tempCart)
         }
-        setCount(count = 0);
-        console.log(cartItems, count);
+        setQty(qty = 0);
+        console.log(cartItems, qty);
     };
     
     return (
         <div className='addToCart-container'>
             <div className='addToCart-counter'>
-                <button onClick={decrementQty} disabled={count === 0}>-</button>
-                <p>{count}</p>
-                <button onClick={incrementQty}>+</button>
+                <button onClick={decrementQty} disabled={qty === 0}>
+                    <span className='addToCart-counter-change'>-</span>
+                </button>
+                <span className='addToCart-count'>{qty}</span>
+                <button onClick={incrementQty}>
+                    <span className='addToCart-counter-change'>+</span>
+                </button>
             </div>
             <div className='addToCart-submit'>
-                <button onClick={() => onAdd("Fall Limited Edition Sneakers", count)} disabled={count === 0}>Add to Cart</button>
+                <button onClick={() => onAdd("Fall Limited Edition Sneakers", qty)} disabled={qty === 0}>
+                    <img src={cartIcon} alt='cart'></img>
+                    <span>Add to Cart</span>
+                </button>
             </div>
         </div>
     )
