@@ -1,5 +1,7 @@
 .productInfo-container {
     cursor: default;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .productInfo-contents {

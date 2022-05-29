@@ -1,8 +1,59 @@
 .navbar-container {
     display: flex;
     height: 100px;
-    margin-bottom: 5%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
     border-bottom: 1px solid hsl(0, 0%, 80%);
+    max-width: 1280px;
+}
+
+.toggle-button button {
+    border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #283b8b;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+  }
+  .toggle-button button:hover {
+    background-color: #2642af;
+  }
+.nav-menu ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+}
+.nav-menu li {  
+    text-align: center;
+    margin: 0;
+}
+.nav-menu li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+.nav-menu li:hover {
+    background-color: #eee;
+}
+.nav-menu ul {
+    display: none;
+}
+.navigation-menu.expanded ul {
+    display: block;
 }
 
 
@@ -33,7 +84,7 @@
 }
 .navbar-cart img {
     cursor: pointer;
-    height: 30%;
+    height: 25%;
     margin: auto;
     position: absolute;
     top: 0px;

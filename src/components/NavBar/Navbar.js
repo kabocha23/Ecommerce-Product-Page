@@ -1,29 +1,35 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import brandIcon from '../../images/logo.svg';
 import cartIcon from '../../images/icon-cart.svg';
 import './Navbar.css';
 
 const Navbar = () => {
 
-    const [ sideCollapsed, setSideCollapsed ] = useState(false);
+    const [isNavExpanded, setIsNavExpanded] = useState(false);
 
-    const toggleSideCollapsed = useCallback(() => {
-      console.log('toggle')
-      setSideCollapsed(collapsed => !collapsed)
-    }, [ setSideCollapsed ])
+    const toggleIsNav = () => {
+        setIsNavExpanded(!isNavExpanded)
+        console.log(isNavExpanded)
+    }
 
     return(
         <div className='navbar-container'>
-            <div id="sidebar" className='sidebar-menu' onClick={toggleSideCollapsed} collapsed={sideCollapsed}>
-                <a>Collections</a>
-                <a>Men</a>
-                <a>Women</a>
-                <a>About</a>
-                <a>Contact</a>
+            <div className="toggle-button">
+                <button 
+                    onClick={toggleIsNav}
+                >☰</button>
             </div>
-            <div id="open-button">
-                <button className="openbtn">☰</button>
+            <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
+                <ul>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>                    
+                </ul>
+
             </div>
+
             <div className='navbar-brand'>
                 <img src={brandIcon} alt='brand-logo'></img>
             </div>
@@ -36,6 +42,6 @@ const Navbar = () => {
         </div>
     )
 
-}
+};
 
 export default Navbar;
