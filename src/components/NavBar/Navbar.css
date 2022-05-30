@@ -30,28 +30,14 @@
     cursor: pointer;
     transition: background-color 0.4s ease-in-out;
     transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 15px;
+    color: hsl(219, 9%, 45%);
 }
 .toggle-button button:hover {
     background-color: hsl(25, 100%, 90%);
-}   
-.navbar-brand {
-    cursor: pointer;
-    height: 100%; 
-    position: relative;
-    width: 20%;
-    max-width: 100px;
-    margin-left: 0px;
 }
-.navbar-brand img {
-    cursor: pointer;
-    height: 30%;
-    margin: auto;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
+
 
 /* nav sidebar menu */
 .nav-menu ul {
@@ -65,14 +51,13 @@
     width: 20%;
     min-width: 200px;
     height: calc(100vh - 77px);
-    background-color: hsla(0, 0%, 100%, 0.90);
-    border-right: 1px solid hsl(0, 0%, 80%);
+    background-color: hsla(0, 0%, 100%, 0.95);
 }
 .nav-menu li {  
     list-style-type: none;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .nav-menu li a {
     text-decoration: none;
@@ -93,7 +78,27 @@
     display: block;
 }
 
+/* sneakers logo */
+.navbar-brand {
+    cursor: pointer;
+    height: 100%; 
+    position: relative;
+    width: 20%;
+    max-width: 100px;
+    margin-left: 0px;
+}
+.navbar-brand img {
+    cursor: pointer;
+    height: 30%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
 
+/* cart logo */
 .navbar-cart {
     position: relative;
     height: 100%; 
@@ -176,40 +181,8 @@
     }
 
     /* nav sidebar menu */
-    .nav-menu {
-
-    }
     .nav-menu ul {
-        display: flex;
-        padding: 0;
-        margin-top: 0px;
-        position: absolute;
         top: 55px;
-        left: 0;
-        flex-direction: column;
-        width: 20%;
-        min-width: 200px;
-        height: calc(100vh - 77px);
-        background-color: hsla(0, 0%, 100%, 0.90);
-        border-right: 1px solid hsl(0, 0%, 80%);
-    }
-    .nav-menu li {  
-        list-style-type: none;
-        text-align: center;
-    }
-    .nav-menu li a {
-        color: black;
-        width: 100%;
-        padding: 1.5rem 0;
-    }
-    .nav-menu li:hover {
-        background-color: #eee;
-    }
-    .nav-menu ul {
-        display: none;
-    }
-    .nav-menu.expanded ul {
-        display: block;
     }
 
     .navbar-cart {
