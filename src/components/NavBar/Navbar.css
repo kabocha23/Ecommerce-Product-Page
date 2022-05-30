@@ -9,61 +9,38 @@
     max-width: 1280px;
 }
 
+.toggle-button {
+    height: 100%; 
+    position: relative;
+    width: 10%;
+    min-width: 100px;
+}
 .toggle-button button {
+    position: absolute;
+    top: 50%;
+    bottom: 0%;
+    left: 20px;
+    right: 0%;
     border: 0;
     height: 40px;
     width: 40px;
     padding: 0.5rem;
-    border-radius: 50%;
-    background-color: #283b8b;
+    border-radius: 10%;
+    background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    position: absolute;
-    top: 50%;
-    right: 25px;
+    transition: background-color 0.4s ease-in-out;
     transform: translateY(-50%);
-    display: none;
-  }
-  .toggle-button button:hover {
-    background-color: #2642af;
-  }
-.nav-menu ul {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 77px);
-    background-color: white;
-    border-top: 1px solid black;
 }
-.nav-menu li {  
-    text-align: center;
-    margin: 0;
-}
-.nav-menu li a {
-    color: black;
-    width: 100%;
-    padding: 1.5rem 0;
-}
-.nav-menu li:hover {
-    background-color: #eee;
-}
-.nav-menu ul {
-    display: none;
-}
-.navigation-menu.expanded ul {
-    display: block;
-}
-
-
+.toggle-button button:hover {
+    background-color: hsl(25, 100%, 90%);
+}   
 .navbar-brand {
     cursor: pointer;
     height: 100%; 
     position: relative;
     width: 20%;
     max-width: 100px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 .navbar-brand img {
     cursor: pointer;
@@ -75,22 +52,72 @@
     left: 0px;
     right: 0px;
 }
-.navbar-cart {
-    height: 100%; 
-    position: relative;
+
+/* nav sidebar menu */
+.nav-menu ul {
+    display: flex;
+    padding: 0;
+    margin-top: 0px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    flex-direction: column;
     width: 20%;
+    min-width: 200px;
+    height: calc(100vh - 77px);
+    background-color: hsla(0, 0%, 100%, 0.90);
+    border-right: 1px solid hsl(0, 0%, 80%);
+}
+.nav-menu li {  
+    list-style-type: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nav-menu li a {
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.nav-menu li:hover {
+    transition: background-color 0.4s ease-in-out;
+    background-color: hsl(25, 100%, 90%);
+}
+.nav-menu ul {
+    display: none;
+}
+.nav-menu.expanded ul {
+    display: block;
+}
+
+
+.navbar-cart {
+    position: relative;
+    height: 100%; 
+    width: 30%;
     max-width: 100px;
     margin-left: auto;
 }
 .navbar-cart img {
     cursor: pointer;
+    position: absolute;
     height: 25%;
     margin: auto;
-    position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 10%;
+    background-color: transparent;
+    transition: background-color 0.4s ease-in-out;
+}
+.navbar-cart img:hover {
+    background-color: hsl(25, 100%, 90%);
 }
 .navbar-profile {
     height: 100%; 
@@ -100,13 +127,20 @@
 }
 .navbar-profile img {
     cursor: pointer;
-    height: 50%;
+    height: 40%;
     margin: auto;
     position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.4s ease-in-out;
+}
+.navbar-profile img:hover {
+    background-color: hsl(25, 100%, 90%);
 }
 
 @media (max-width: 500px) {
@@ -116,13 +150,19 @@
         margin-bottom: 0%;
         border-bottom: 0px;
     }
+    .toggle-button {
+        height: 100%; 
+        position: relative;
+        width: 10%;
+        min-width: 50px;
+    }
     .navbar-brand {
         cursor: pointer;
         height: 100%; 
         position: relative;
         width: 20%;
         max-width: 100px;
-        margin-left: auto;
+        margin-left: 5%;
     }
     .navbar-brand img {
         cursor: pointer;
@@ -134,6 +174,44 @@
         left: 0px;
         right: 0px;
     }
+
+    /* nav sidebar menu */
+    .nav-menu {
+
+    }
+    .nav-menu ul {
+        display: flex;
+        padding: 0;
+        margin-top: 0px;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        flex-direction: column;
+        width: 20%;
+        min-width: 200px;
+        height: calc(100vh - 77px);
+        background-color: hsla(0, 0%, 100%, 0.90);
+        border-right: 1px solid hsl(0, 0%, 80%);
+    }
+    .nav-menu li {  
+        list-style-type: none;
+        text-align: center;
+    }
+    .nav-menu li a {
+        color: black;
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+    .nav-menu li:hover {
+        background-color: #eee;
+    }
+    .nav-menu ul {
+        display: none;
+    }
+    .nav-menu.expanded ul {
+        display: block;
+    }
+
     .navbar-cart {
         height: 100%; 
         position: relative;
@@ -157,7 +235,7 @@
         min-width: 50px;
     }
     .navbar-profile img {
-        height: 40px;
+        height: 55%;
         margin: auto;
         position: absolute;
         top: 0px;
