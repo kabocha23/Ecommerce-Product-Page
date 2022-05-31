@@ -10,73 +10,34 @@
 }
 
 .toggle-button {
-    height: 100%; 
-    position: relative;
-    width: 10%;
-    min-width: 100px;
-}
-.toggle-button button {
-    position: absolute;
-    top: 50%;
-    bottom: 0%;
-    left: 20px;
-    right: 0%;
-    border: 0;
-    height: 40px;
-    width: 40px;
-    padding: 0.5rem;
-    border-radius: 10%;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.4s ease-in-out;
-    transform: translateY(-50%);
-    font-weight: bold;
-    font-size: 15px;
-    color: hsl(219, 9%, 45%);
-}
-.toggle-button button:hover {
-    background-color: hsl(25, 100%, 90%);
-}
-
-
-/* nav sidebar menu */
-.nav-menu ul {
-    display: flex;
-    padding: 0;
-    margin-top: 0px;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    flex-direction: column;
-    width: 20%;
-    min-width: 200px;
-    height: calc(100vh - 77px);
-    background-color: hsla(0, 0%, 100%, 0.95);
-}
-.nav-menu li {  
-    list-style-type: none;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.nav-menu li a {
-    text-decoration: none;
-    color: hsl(219, 9%, 45%);
-    font-weight: bold;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.nav-menu li:hover {
-    transition: background-color 0.4s ease-in-out;
-    background-color: hsl(25, 100%, 90%);
-}
-.nav-menu ul {
     display: none;
 }
-.nav-menu.expanded ul {
-    display: block;
+.nav-menu {
+    display: none;
 }
+
+.nav-menu-fs {
+    display: flex;
+    height: 100%; 
+    position: relative;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu-fs-sub {
+    height: 100%;
+}
+.nav-menu-fs a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: hsl(219, 9%, 45%);
+    font-weight: bold;
+}
+.nav-menu-fs a:hover {
+    border-bottom: 5px solid hsl(26, 100%, 70%);
+}
+
+
 
 /* sneakers logo */
 .navbar-brand {
@@ -84,8 +45,8 @@
     height: 100%; 
     position: relative;
     width: 20%;
-    max-width: 100px;
-    margin-left: 0px;
+    min-width: 210px;
+    margin-left: 20px;
 }
 .navbar-brand img {
     cursor: pointer;
@@ -98,12 +59,12 @@
     right: 0px;
 }
 
-/* cart logo */
+/* cart */
 .navbar-cart {
     position: relative;
     height: 100%; 
-    width: 30%;
-    max-width: 100px;
+    width: 10%;
+    max-width: 50px;
     margin-left: auto;
 }
 .navbar-cart img {
@@ -148,6 +109,88 @@
     background-color: hsl(25, 100%, 90%);
 }
 
+@media (max-width: 900px) {
+    .toggle-button {
+        display: block;
+        height: 100%; 
+        position: relative;
+        width: 10%;
+        min-width: 50px;
+    }
+    .toggle-button button {
+        position: absolute;
+        top: 50%;
+        bottom: 0%;
+        left: 20px;
+        right: 0%;
+        border: 0;
+        height: 40px;
+        width: 40px;
+        padding: 0.5rem;
+        border-radius: 10%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.4s ease-in-out;
+        transform: translateY(-50%);
+        font-weight: bold;
+        font-size: 15px;
+        color: hsl(219, 9%, 45%);
+    }
+    .toggle-button button:hover {
+        background-color: hsl(25, 100%, 90%);
+    }
+
+
+    /* nav sidebar menu */
+    .nav-menu-fs {
+        display: none;
+    }
+    .nav-menu {
+        display: block;
+    }
+    .nav-menu ul {
+        display: flex;
+        padding: 0;
+        margin-top: 0px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        flex-direction: column;
+        width: 20%;
+        min-width: 200px;
+        height: calc(100vh - 77px);
+        background-color: hsla(0, 0%, 100%, 0.95);
+        border: 1px solid hsl(0, 0%, 80%);
+    }
+    .nav-menu li {  
+        list-style-type: none;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .nav-menu li a {
+        text-decoration: none;
+        color: hsl(219, 9%, 45%);
+        font-weight: bold;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .nav-menu li:hover {
+        transition: background-color 0.4s ease-in-out;
+        background-color: hsl(25, 100%, 90%);
+    }
+    .nav-menu ul {
+        display: none;
+    }
+    .nav-menu.expanded ul {
+        display: block;
+    }
+    .navbar-brand {
+        margin-left: 20px;
+    }
+}
+
 @media (max-width: 500px) {
     .navbar-container {
         display: flex;
@@ -155,12 +198,7 @@
         margin-bottom: 0%;
         border-bottom: 0px;
     }
-    .toggle-button {
-        height: 100%; 
-        position: relative;
-        width: 10%;
-        min-width: 50px;
-    }
+    
     .navbar-brand {
         cursor: pointer;
         height: 100%; 

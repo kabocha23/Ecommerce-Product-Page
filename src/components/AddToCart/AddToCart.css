@@ -76,7 +76,7 @@
     background-color: hsl(25, 100%, 80%);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .addToCart-counter {
         display: flex;
         flex-flow: row nowrap;

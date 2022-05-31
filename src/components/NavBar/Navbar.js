@@ -15,12 +15,7 @@ const Navbar = () => {
     return(
         <div className='navbar-container'>
             <div className='toggle-button'>
-                <button 
-                    onClick={toggleIsNav}
-                >☰</button>
-            </div>
-            <div className='navbar-brand'>
-                <img src={brandIcon} alt='brand-logo'></img>
+                <button onClick={toggleIsNav}>☰</button>
             </div>
             <div className={isNavExpanded ? 'nav-menu expanded' : 'nav-menu'}>
                 <ul>
@@ -30,6 +25,16 @@ const Navbar = () => {
                     <li><a href='#'>About</a></li>
                     <li><a href='#'>Contact</a></li>                    
                 </ul>
+            </div>
+            <div className='navbar-brand'>
+                <img src={brandIcon} alt='brand-logo'></img>
+            </div>
+            <div className='nav-menu-fs'>   
+                <a href='#'>Collections</a>
+                <a href='#'>Men</a>
+                <a href='#'>Women</a>
+                <a href='#'>About</a>
+                <a href='#'>Contact</a>                    
             </div>
             <div className='navbar-cart'>
                 <img src={cartIcon} alt='cart'></img>
