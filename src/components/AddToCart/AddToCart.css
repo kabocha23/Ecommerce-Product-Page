@@ -3,16 +3,19 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+
+/* Quantity selector */
 .addToCart-counter {
     display: flex;
     flex-flow: row nowrap;
     cursor: default;
-    width: 45%;
+    width: 30%;
     height: 50px;
     justify-content: center;
     margin-right: 10px;
     background-color: hsl(223, 64%, 98%);
     border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .addToCart-counter button {
     all: unset;
@@ -47,6 +50,9 @@
     font-weight: bolder;
     background-color: hsl(223, 64%, 98%);
 }
+
+
+/* Add to Cart button */
 .addToCart-submit {
     width: 45%;
     display: flex;
@@ -66,6 +72,7 @@
     font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .addToCart-submit img {
     filter: brightness(0) invert(1);

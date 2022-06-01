@@ -4,11 +4,13 @@
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
     border-bottom: 1px solid hsl(0, 0%, 80%);
     max-width: 1280px;
 }
 
+
+/* nav sidebar dropdown button */
 .toggle-button {
     display: none;
 }
@@ -17,26 +19,27 @@
 }
 
 .nav-menu-fs {
-    display: flex;
     height: 100%; 
     position: relative;
-    margin-left: 20px;
-    align-items: center;
-    justify-content: center;
+    margin-left: 30px;
 }
 .nav-menu-fs-sub {
+    display: flex;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 }
-.nav-menu-fs a {
+.nav-menu-fs-sub a {
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 25px;
     color: hsl(219, 9%, 45%);
     font-weight: bold;
 }
-.nav-menu-fs a:hover {
-    border-bottom: 5px solid hsl(26, 100%, 70%);
+.nav-menu-fs-sub a:hover {
+    color: hsl(219, 9%, 20%);
+    border-bottom: 5px solid hsl(25, 100%, 90%);
+    transition: border-bottom 0.2s ease-in-out;
 }
-
 
 
 /* sneakers logo */
@@ -50,7 +53,7 @@
 }
 .navbar-brand img {
     cursor: pointer;
-    height: 30%;
+    height: 25%;
     margin: auto;
     position: absolute;
     top: 0px;
@@ -59,7 +62,8 @@
     right: 0px;
 }
 
-/* cart */
+
+/* cart logo */
 .navbar-cart {
     position: relative;
     height: 100%; 
@@ -85,6 +89,9 @@
 .navbar-cart img:hover {
     background-color: hsl(25, 100%, 90%);
 }
+
+
+/* profile image */
 .navbar-profile {
     height: 100%; 
     position: relative;
@@ -100,13 +107,13 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    padding: 0.5rem;
+    padding: 0.2rem;
     border-radius: 50%;
     background-color: transparent;
     transition: background-color 0.4s ease-in-out;
 }
 .navbar-profile img:hover {
-    background-color: hsl(25, 100%, 90%);
+    background-color: hsl(25, 100%, 80%);
 }
 
 @media (max-width: 900px) {
@@ -198,19 +205,23 @@
         margin-bottom: 0%;
         border-bottom: 0px;
     }
-    
+
+    .toggle-button button {
+        left: 10px;
+    }
     .navbar-brand {
         cursor: pointer;
         height: 100%; 
         position: relative;
-        width: 20%;
         max-width: 100px;
-        margin-left: 5%;
+        margin-left: 0px;
     }
     .navbar-brand img {
         cursor: pointer;
         height: 30%;
-        margin: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
         position: absolute;
         top: 0px;
         bottom: 0px;
