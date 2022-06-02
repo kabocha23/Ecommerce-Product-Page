@@ -67,7 +67,7 @@
 .chi-checkout button {
     all: unset;
     cursor: pointer;
-    width: 150px;
+    width: 200px;
     height: 35px;
     background-color: hsl(26, 100%, 55%);
     border: none;

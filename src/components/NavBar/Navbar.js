@@ -10,6 +10,8 @@ const Navbar = ({qty, setQty, cartItems, setCartItems}) => {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     const [isCartModal, setIsCartModal] = useState(false);
 
+    const cartQty = cartItems.length;  
+
     const toggleIsNav = () => {
         setIsNavExpanded(!isNavExpanded)
     }
@@ -51,6 +53,13 @@ const Navbar = ({qty, setQty, cartItems, setCartItems}) => {
                     alt='cart'
                     onClick={toggleCartModal} 
                 ></img>
+                {
+                    cartQty < 1 ? 
+                    '' : 
+                    <div className='cart-qty-popup'>
+                            <p>{cartQty}</p>
+                    </div>
+                }
                 <div className='cart-modal'>
                     {isCartModal ? 
                         <Cart 
@@ -58,6 +67,7 @@ const Navbar = ({qty, setQty, cartItems, setCartItems}) => {
                             setQty={setQty} 
                             cartItems={cartItems} 
                             setCartItems={setCartItems}
+                            cartQty={cartQty}
                         />
                         :''
                     }     

@@ -2,13 +2,12 @@ import React from 'react';
 import deleteIcon from '../../images/icon-delete.svg';
 import './Cart.css';
 
-const Cart = ({qty, setQty, cartItems, setCartItems}) => {
+const Cart = ({qty, setQty, cartItems, setCartItems, cartQty}) => {
 
     const onRemoveFromCart = (item) => {
         setCartItems(cartItems = []);
     }
-
-    const cartQty = cartItems.length;        
+      
     const cartFiltered = cartItems.filter((val, ind, self) => {
         return self.indexOf(val) === ind;
     })
