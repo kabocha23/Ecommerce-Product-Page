@@ -4,19 +4,17 @@ import brandIcon from '../../images/logo.svg';
 import cartIcon from '../../images/icon-cart.svg';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({qty, setQty, cartItems, setCartItems}) => {
 
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     const [isCartModal, setIsCartModal] = useState(false);
 
     const toggleIsNav = () => {
         setIsNavExpanded(!isNavExpanded)
-        console.log(isNavExpanded)
     }
 
     const toggleCartModal = () => {
         setIsCartModal(!isCartModal)
-        console.log(isCartModal)
     }
 
     return(
@@ -52,7 +50,15 @@ const Navbar = () => {
                     onClick={toggleCartModal} 
                 ></img>
                 <div className='cart-modal'>
-                    {isCartModal ? <Cart/>:''}     
+                    {isCartModal ? 
+                        <Cart 
+                            qty={qty} 
+                            setQty={setQty} 
+                            cartItems={cartItems} 
+                            setCartItems={setCartItems}
+                        />
+                        :''
+                    }     
                 </div>
 
             </div>

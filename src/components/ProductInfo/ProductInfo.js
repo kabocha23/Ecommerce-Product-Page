@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProductPhoto from '../ProductPhoto/ProductPhoto';
 import AddToCart from '../AddToCart/AddToCart';
 import './ProductInfo.css';
 
-class ProductInfo extends Component {
+const ProductInfo = ({qty, setQty, cartItems, setCartItems}) => {
 
-    render() {
         return (
             <div className='productInfo-container'>
                 <div className='productInfo-contents'>
@@ -28,13 +27,17 @@ class ProductInfo extends Component {
                             </div>
                         </div>
                         <div className='productInfo-add-to-cart'>
-                            <AddToCart />
+                            <AddToCart 
+                                qty={qty} 
+                                setQty={setQty} 
+                                cartItems={cartItems} 
+                                setCartItems={setCartItems}
+                            />
                         </div>
                     </div>             
                 </div>
             </div>
         )
-    }
 }
 
 export default ProductInfo;

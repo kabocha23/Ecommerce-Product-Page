@@ -2,7 +2,7 @@
     position: absolute;
     width: 250px;
     height: 175px;
-    top: 70px;
+    top: 100px;
     right: 0px;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -34,11 +34,18 @@
     font-size: 12px;
 }
 
+
+
 @media (max-width: 900px) {
     .cart-modal-container {
-        width: 350px;
-        height: 175px;
+        top: 100px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .cart-modal-container {
         top: 55px;
-        right: -50px;
+        right: 40%;
     }
 }

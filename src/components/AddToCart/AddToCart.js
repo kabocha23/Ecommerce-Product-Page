@@ -1,11 +1,8 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import cartIcon from '../../images/icon-cart.svg';
 import './AddToCart.css';
 
-const AddToCart = () => {
-
-    let [qty, setQty] = useState(0);
-    let [cartItems, setCartItems] = useState([]);
+const AddToCart = ({qty, setQty, cartItems, setCartItems}) => {
 
     const incrementQty = () => {
         setQty(qty + 1);
@@ -15,18 +12,14 @@ const AddToCart = () => {
         setQty(qty => Math.max(qty-1,0));
     }
 
-    const onAdd = (item, qty) => {
-        if(cartItems[item]) {
-            for(let i = 0; i < qty; i++) {
-                setCartItems(() => cartItems.push(item))
-            }
-        } else {
-            let tempCart = [...cartItems]
-            for(let i = 0; i < qty; i++) {
-                tempCart.push(item)
-            }
-            setCartItems(cartItems = tempCart)
-        }
+    const onAddToCart = (item, qty) => {
+        let tempCart = [...cartItems];
+
+        for(let i = 0; i < qty; i++) {
+            tempCart.push(item)
+        };
+
+        setCartItems(cartItems = tempCart);
         setQty(qty = 0);
         console.log(cartItems, qty);
     };
@@ -43,7 +36,7 @@ const AddToCart = () => {
                 </button>
             </div>
             <div className='addToCart-submit'>
-                <button onClick={() => onAdd("Fall Limited Edition Sneakers", qty)} disabled={qty === 0}>
+                <button onClick={() => onAddToCart("Fall Limited Edition Sneakers", qty)} disabled={qty === 0}>
                     <img src={cartIcon} alt='cart'></img>
                     <span>Add to Cart</span>
                 </button>

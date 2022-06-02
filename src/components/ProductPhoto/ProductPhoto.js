@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ProductPhoto.css';
 
-class ProductPhoto extends Component{
+const ProductPhoto = () => {
 
-    render(){
-        return(
-            <div className='productPhoto-container'>
-                <img src={require('../../images/image-product-1.jpg')} alt='product-1'></img>
-            </div>
-        )
-    }
+
+    return(
+        <div className='productPhoto-container'>
+            <img src={require('../../images/image-product-1.jpg')} alt='product-1'></img>
+        </div>
+    )
+
 }
 
 export default ProductPhoto;
