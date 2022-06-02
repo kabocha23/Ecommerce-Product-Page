@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
 import brandIcon from '../../images/logo.svg';
 import cartIcon from '../../images/icon-cart.svg';
+import avatarIcon from '../../images/image-avatar.png';
 import './Navbar.css';
 
 const Navbar = ({qty, setQty, cartItems, setCartItems}) => {
@@ -45,6 +46,7 @@ const Navbar = ({qty, setQty, cartItems, setCartItems}) => {
             </div>
             <div className='navbar-cart'>
                 <img 
+                    id='navbar-cart-logo'
                     src={cartIcon} 
                     alt='cart'
                     onClick={toggleCartModal} 
@@ -63,7 +65,7 @@ const Navbar = ({qty, setQty, cartItems, setCartItems}) => {
 
             </div>
             <div className='navbar-profile'>
-                <img src={require('../../images/image-avatar.png')} alt='avatar'></img>
+                <img src={avatarIcon} alt='avatar'></img>
             </div>
         </div>
     )

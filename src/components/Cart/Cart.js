@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import deleteIcon from '../../images/icon-delete.svg';
 import './Cart.css';
 
 const Cart = ({qty, setQty, cartItems, setCartItems}) => {
 
     const onRemoveFromCart = (item) => {
-        if(!cartItems) return
-
-        let tempCart = [...cartItems];
-        
-        for(let i = 0; i < tempCart.length; i++) {
-            if(tempCart[i] == item) {
-                tempCart.splice(i,1);
-                setCartItems(cartItems = tempCart);
-                return
-            }
-        }
+        setCartItems(cartItems = []);
     }
+
+    const cartQty = cartItems.length;        
+    const cartFiltered = cartItems.filter((val, ind, self) => {
+        return self.indexOf(val) === ind;
+    })
   
     return(
         <div className="cart-modal-container">
@@ -23,7 +19,22 @@ const Cart = ({qty, setQty, cartItems, setCartItems}) => {
                 <p>Cart</p>
             </div>
             <div className="cart-items">
-                <p>Your cart is empty</p>
+                {
+                    cartQty < 1 ?
+                    <p>Your cart is empty</p> :
+                    <div className='cart-has-items'>
+                        <div className='chi-items'>
+                            {[cartFiltered].map((item, index) => {
+                                return <p key={index}>{item} x {cartQty}</p>
+                            })}
+                            <img src={deleteIcon} onClick={onRemoveFromCart} alt='delete'></img>
+                        </div>
+                        <div className='chi-checkout'>
+                            <button>Checkout</button>
+                        </div>
+                    </div>
+                }
+                
             </div>
         </div>
 

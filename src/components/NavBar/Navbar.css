@@ -70,7 +70,7 @@
     max-width: 50px;
     margin-left: auto;
 }
-.navbar-cart img {
+#navbar-cart-logo {
     cursor: pointer;
     position: absolute;
     height: 25%;
@@ -81,12 +81,13 @@
     right: 0px;
     border: 0;
     padding: 0.5rem;
-    border-radius: 10%;
     background-color: transparent;
     transition: background-color 0.4s ease-in-out;
 }
-.navbar-cart img:hover {
-    background-color: hsl(25, 100%, 90%);
+#navbar-cart-logo:hover {
+    color: hsl(219, 9%, 20%);
+    border-bottom: 5px solid hsl(25, 100%, 90%);
+    transition: border-bottom 0.2s ease-in-out;
 }
 
 

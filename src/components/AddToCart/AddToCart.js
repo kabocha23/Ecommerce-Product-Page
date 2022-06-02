@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cartIcon from '../../images/icon-cart.svg';
 import './AddToCart.css';
 
@@ -13,6 +13,7 @@ const AddToCart = ({qty, setQty, cartItems, setCartItems}) => {
     }
 
     const onAddToCart = (item, qty) => {
+
         let tempCart = [...cartItems];
 
         for(let i = 0; i < qty; i++) {
@@ -22,7 +23,7 @@ const AddToCart = ({qty, setQty, cartItems, setCartItems}) => {
         setCartItems(cartItems = tempCart);
         setQty(qty = 0);
         console.log(cartItems, qty);
-    };
+    }
     
     return (
         <div className='addToCart-container'>

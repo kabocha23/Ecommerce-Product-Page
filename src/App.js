@@ -4,20 +4,9 @@ import ProductInfo from './components/ProductInfo/ProductInfo';
 import './App.css';
 
 const App = () => {
-  let [qty, setQty] = useState(0);
-  let [cartItems, setCartItems] = useState([]);
+  const [qty, setQty] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
-  const onAdd = (item, qty) => {
-    let tempCart = [...cartItems];
-
-    for(let i = 0; i < qty; i++) {
-        tempCart.push(item)
-    };
-
-    setCartItems(cartItems = tempCart);
-    setQty(qty = 0);
-    console.log(cartItems, qty);
-  };
 
   return (
     <div className="App">
