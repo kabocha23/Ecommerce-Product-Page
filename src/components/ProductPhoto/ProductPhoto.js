@@ -7,32 +7,29 @@ import './ProductPhoto.css';
 
 const ProductPhoto = () => {
 
-    const expandImg = (imgs) => {
-        // Get the expanded image
+    const expandImg = (img) => {
         let getExpImg = document.getElementById("expandedImg");
-        // Use the same src in the expanded image as the image being clicked on from the grid
-        getExpImg.src = imgs.src;
-        // Show the container element (hidden with CSS)
-        getExpImg.parentElement.style.display = "block";
+        getExpImg.src = img.src;
+        console.log(img.src)
       }
 
     return(
         <div className='productPhoto-container'>
-            <div className='productPhoto-container'>
-                <img src={require('../../images/image-product-1.jpg')} alt='product-1'></img>
+            <div className='productPhoto-selected-img'>
+                <img id='expandedImg' src={expandImg} alt='product-photo-main'></img>
             </div>
             <div class="photo-reel">
                 <div class="column">
-                    <img src={galleryPreview1} alt="first" onclick={expandImg(this)}></img>
+                    <img src={galleryPreview1} alt="first" onclick={expandImg}></img>
                 </div>
                 <div class="column">
-                    <img src={galleryPreview2} alt="second" onclick={expandImg(this)}></img>
+                    <img src={galleryPreview2} alt="second" onclick={expandImg}></img>
                 </div>
                 <div class="column">
-                    <img src={galleryPreview3} alt="third" onclick={expandImg(this)}></img>
+                    <img src={galleryPreview3} alt="third" onclick={expandImg}></img>
                 </div>
                 <div class="column">
-                    <img src={galleryPreview4} alt="fourth" onclick={expandImg(this)}></img>
+                    <img src={galleryPreview4} alt="fourth" onclick={expandImg}></img>
                 </div>
             </div>
 

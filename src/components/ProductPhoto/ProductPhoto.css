@@ -8,6 +8,19 @@
     margin: auto;
 }   
 
+.photo-reel {
+    display: flex;
+    height: 100px;
+    justify-content: space-evenly;
+}
+.column {
+    height: 100%;
+}
+.column img {
+    height: 100%;
+    width: 100px;
+}
+
 @media (max-width: 500px) {
     .productPhoto-container img {
         width: 100%;
