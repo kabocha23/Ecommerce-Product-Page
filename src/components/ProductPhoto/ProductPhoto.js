@@ -20,16 +20,32 @@ const ProductPhoto = () => {
             </div>
             <div className="photo-reel">
                 <div className="column">
-                    <img src={galleryExpanded1} id='galleryExpanded1' alt="first" onClick={expandImg}></img>
+                    <img 
+                        src={galleryExpanded1}  
+                        alt="first" 
+                        onClick={expandImg}>
+                    </img>
                 </div>
                 <div className="column">
-                    <img src={galleryExpanded2} id='galleryExpanded2' alt="second" onClick={expandImg}></img>
+                    <img 
+                        src={galleryExpanded2}  
+                        alt="second" 
+                        onClick={expandImg}>
+                    </img>
                 </div>
                 <div className="column">
-                    <img src={galleryExpanded3} id='galleryExpanded3' alt="third" onClick={expandImg}></img>
+                    <img 
+                        src={galleryExpanded3}  
+                        alt="third" 
+                        onClick={expandImg}>
+                    </img>
                 </div>
                 <div className="column">
-                    <img src={galleryExpanded4} id='galleryExpanded4' alt="fourth" onClick={expandImg}></img>
+                    <img 
+                        src={galleryExpanded4}  
+                        alt="fourth" 
+                        onClick={expandImg}>
+                    </img>
                 </div>
             </div>
 
