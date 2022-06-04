@@ -1,35 +1,35 @@
-import React from 'react';
-import galleryPreview1 from '../../images/image-product-1-thumbnail.jpg';
-import galleryPreview2 from '../../images/image-product-2-thumbnail.jpg';
-import galleryPreview3 from '../../images/image-product-3-thumbnail.jpg';
-import galleryPreview4 from '../../images/image-product-4-thumbnail.jpg';
+import React, { useState } from 'react';
+import galleryExpanded1 from '../../images/image-product-1.jpg';
+import galleryExpanded2 from '../../images/image-product-2.jpg';
+import galleryExpanded3 from '../../images/image-product-3.jpg';
+import galleryExpanded4 from '../../images/image-product-4.jpg';
 import './ProductPhoto.css';
 
 const ProductPhoto = () => {
 
+    const [imgSrc, setImgSrc] = useState(galleryExpanded1)
+
     const expandImg = (img) => {
-        let getExpImg = document.getElementById("expandedImg");
-        getExpImg.src = img.src;
-        console.log(img.src)
-      }
+        setImgSrc(img.target.src);
+    }
 
     return(
         <div className='productPhoto-container'>
             <div className='productPhoto-selected-img'>
-                <img id='expandedImg' src={expandImg} alt='product-photo-main'></img>
+                <img id='expandedImg' src={imgSrc} alt='product-main'></img>
             </div>
-            <div class="photo-reel">
-                <div class="column">
-                    <img src={galleryPreview1} alt="first" onclick={expandImg}></img>
+            <div className="photo-reel">
+                <div className="column">
+                    <img src={galleryExpanded1} id='galleryExpanded1' alt="first" onClick={expandImg}></img>
                 </div>
-                <div class="column">
-                    <img src={galleryPreview2} alt="second" onclick={expandImg}></img>
+                <div className="column">
+                    <img src={galleryExpanded2} id='galleryExpanded2' alt="second" onClick={expandImg}></img>
                 </div>
-                <div class="column">
-                    <img src={galleryPreview3} alt="third" onclick={expandImg}></img>
+                <div className="column">
+                    <img src={galleryExpanded3} id='galleryExpanded3' alt="third" onClick={expandImg}></img>
                 </div>
-                <div class="column">
-                    <img src={galleryPreview4} alt="fourth" onclick={expandImg}></img>
+                <div className="column">
+                    <img src={galleryExpanded4} id='galleryExpanded4' alt="fourth" onClick={expandImg}></img>
                 </div>
             </div>
 
