@@ -1,4 +1,4 @@
-A responsive product page web and mobile design for a fictional e-commerce website Sneakers Company.
+A responsive web/mobile design for a fictional e-commerce website Sneakers Company. No libraries imported for this project.
 
 Features include navbar transitioning to collapsible sidebar, selectible photo gallery, cart with CRUD functionality, live cart quantity bubble.
 
