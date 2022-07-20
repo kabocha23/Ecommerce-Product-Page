@@ -4,6 +4,7 @@ Features include navbar transitioning to collapsible sidebar, selectible photo g
 
 No libraries imported for this project.
 
+A responsive product page web and mobile design for a fictional insurance company. Please view the hosted site here!~ https://kabocha23.github.io/Insure-Landing-Page/
 
 ![Desktop preview](https://github.com/kabocha23/Ecommerce-Product-Page/blob/main/src/images/sneakers.png)
 
