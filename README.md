@@ -1,10 +1,10 @@
-A responsive web/mobile design for a fictional e-commerce website Sneakers Company. No libraries imported for this project.
+A responsive web/mobile design for a fictional e-commerce website Sneakers Company.
 
-Features include navbar transitioning to collapsible sidebar, selectible photo gallery, cart with CRUD functionality, live cart quantity bubble.
+Features include transitioning navbar/collapsible sidebar, selectable photo gallery, cart with CRUD functionality, live cart quantity bubble.
 
-No libraries imported for this project.
+No libraries were imported for this project.
 
-A responsive product page web and mobile design for a fictional insurance company. Please view the hosted site here!~ https://kabocha23.github.io/Insure-Landing-Page/
+Please view the hosted site here!~ https://kabocha23.github.io/Insure-Landing-Page/
 
 ![Desktop preview](https://github.com/kabocha23/Ecommerce-Product-Page/blob/main/src/images/sneakers.png)
 
